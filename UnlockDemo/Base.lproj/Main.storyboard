@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4r2-ke-z0D">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="UnlockDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="miao" translatesAutoresizingMaskIntoConstraints="NO" id="51L-wh-lfe">
+                                <rect key="frame" x="107.5" y="263.5" width="160" height="160"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="51L-wh-lfe" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="hDy-T2-CEk"/>
+                            <constraint firstItem="51L-wh-lfe" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="jep-Ro-sYG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="167" y="26"/>
+        </scene>
+        <!--Verify View Controller-->
+        <scene sceneID="24V-jo-Rb9">
+            <objects>
+                <viewController id="4r2-ke-z0D" customClass="VerifyViewController" customModule="UnlockDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sbf-ma-XLW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lo7-NW-m9h">
+                                <rect key="frame" x="134" y="329.5" width="107" height="28"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" title="点击进行面容解锁"/>
+                                <connections>
+                                    <action selector="verifyBtnAction" destination="4r2-ke-z0D" eventType="touchUpInside" id="u7m-FB-syH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Wt-pm-qMa">
+                                <rect key="frame" x="147.5" y="239.5" width="80" height="80"/>
+                                <state key="normal" image="img_faceid"/>
+                                <connections>
+                                    <action selector="verifyBtnAction" destination="4r2-ke-z0D" eventType="touchUpInside" id="yCH-bm-SKe"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Lo7-NW-m9h" firstAttribute="top" secondItem="1Wt-pm-qMa" secondAttribute="bottom" constant="10" id="IKS-7F-eoZ"/>
+                            <constraint firstItem="1Wt-pm-qMa" firstAttribute="centerX" secondItem="242-qw-5Ym" secondAttribute="centerX" id="dga-gK-ucp"/>
+                            <constraint firstItem="Lo7-NW-m9h" firstAttribute="centerX" secondItem="242-qw-5Ym" secondAttribute="centerX" id="gOv-eS-N1Q"/>
+                            <constraint firstItem="Lo7-NW-m9h" firstAttribute="centerY" secondItem="242-qw-5Ym" secondAttribute="centerY" id="opE-l8-6qO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="242-qw-5Ym"/>
+                    </view>
+                    <connections>
+                        <outlet property="verifyBtnImg" destination="1Wt-pm-qMa" id="2Ag-yN-dKH"/>
+                        <outlet property="verifyBtnText" destination="Lo7-NW-m9h" id="aGJ-hW-jJb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QtS-lb-ua2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="964" y="26"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="img_faceid" width="80" height="80"/>
+        <image name="miao" width="160" height="160"/>
+    </resources>
+</document>
